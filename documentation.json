@@ -67,16 +67,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/toolbar.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -92,6 +82,16 @@
                 "deprecationMessage": "",
                 "type": "Story<ActionComponent>",
                 "defaultValue": "args => ({ \r\n    props: {...args, }, \r\n    styles: [], \r\n    template: `\r\n            <cb-topbar-action  [icon]=\"'dashboard'\" label=\"Tinmel-Board\"\r\n            ></cb-topbar-action>\r\n        `,\r\n    })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
             },
             {
                 "name": "TopBar",

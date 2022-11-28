@@ -10,15 +10,17 @@ export default {
         imports: [TopBarModule,],
         }), 
     ],
- title: 'Components/HeaderAction',
+ title: 'Components/Header',
   excludeStories: /.*Data$/,
    argTypes: {
-    icon: {
-        control: {type: 'srting'},
-        },
+        icon: {
+            control: {type: 'select'},
+             options: ['settings', 'dashboard', 'home'] as Array<String>,
+            },
         label: {
-        control: {type: 'string',}
-        } 
+                type: { name: 'string', required: true },
+                control: {type: 'text'},
+            } 
     } as ArgTypes,
 } as Meta<ActionComponent>;
 
@@ -26,12 +28,12 @@ const Template: Story<ActionComponent> = args => ({
     props: {...args, }, 
     styles: [], 
     template: `
-            <cb-topbar-action  [icon]="'dashboard'" label="Tinmel-Board"
+            <cb-topbar-action  [icon]="icon" [label]="label"
             ></cb-topbar-action>
         `,
     });
-export const TopBar = Template.bind({});
-TopBar.args = { 
+export const ToolBarAction = Template.bind({});
+ToolBarAction.args = { 
         icon: 'dashboard',
         label: 'components',
         

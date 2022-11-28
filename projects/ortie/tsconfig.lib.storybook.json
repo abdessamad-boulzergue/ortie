@@ -6,7 +6,7 @@
       "inlineSources": true,
       "declarationMap": true,
       "outDir": "../../out-tcs/lib",
-      "allowSyntheticDefaultImports": true
+      "allowSyntheticDefaultImports": true,
     },
     "exclude": [
       "src/test.ts",

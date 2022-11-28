@@ -36,19 +36,20 @@ const Template: Story<TopBarComponent> = args => ({
             </cb-top-bar>
          `,
     });
-export const TopBar = Template.bind({});TopBar.args = { 
+export const ToolBar = Template.bind({});
+ToolBar.args = { 
     actions: [
         {
         id: '1',
         icon: 'dashboard',
-        label: 'components',
-        onClick: () => console.log('hello components'),
+        label: 'dashboard',
+        onClick: () => console.log('dashboard clicked'),
         },
         {
         id: '2',
         icon: 'settings',
-        label: 'users',
-        onClick: () => console.log('hello users'),
+        label: 'settings',
+        onClick: () => console.log('settings clicked!'),
         }, 
 ], 
 position: 'relative',

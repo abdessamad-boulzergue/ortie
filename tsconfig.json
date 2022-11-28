@@ -11,6 +11,13 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ortie": [
+        "projects/ortie/src/public-api",
+        "dist/ortie/ortie",
+        "dist/ortie"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

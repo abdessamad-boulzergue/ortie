@@ -1,0 +1,47 @@
+:host {
+  background: var(--background-white);
+  border-radius: 16px;
+  height: 32px;
+  cursor: pointer;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+:host .avatar {
+  background: var(--background-blue);
+  border-radius: 16px;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 115%;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  padding: 8;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  height: 25px;
+  width: 25px;
+}
+
+:host .name {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 115%;
+  letter-spacing: -0.01em;
+  color: #3970E6;
+}
+
+:host:hover:active,
+:host.active {
+  background: var(--action-light-background-active);
+  color: var(--action-selected-color);
+}

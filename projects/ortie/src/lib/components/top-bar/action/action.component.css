@@ -1,0 +1,38 @@
+:host {
+  height: 32px;
+  background: var(--background-white);
+  border-radius: 20px;
+  padding: 12px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--primary-text-color);
+  gap: 8px;
+  user-select: none;
+}
+
+:host:hover {
+  background: var(--action-light-background-hover);
+  color: var(--action-background-hover);
+}
+
+:host span {
+  display: inline-block;
+}
+
+:host .icon {
+  font-size: 18px;
+}
+
+:host .label {
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+:host:hover:active, :host.active {
+  background: var(--action-light-background-active);
+  color: var(--action-selected-color);
+}

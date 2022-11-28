@@ -3,5 +3,49 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ortie": {
+      "projectType": "library",
+      "root": "projects/",
+      "sourceRoot": "projects/ortie/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ortie/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ortie/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ortie/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "storybook":{
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "tsConfig":"projects/ortie/tsconfig.lib.storybook.json"
+          }
+        },
+        "build:storybook":{
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "tsConfig":"projects/ortie/tsconfig.lib.storybook.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ortie/src/test.ts",
+            "tsConfig": "projects/ortie/tsconfig.spec.json",
+            "karmaConfig": "projects/ortie/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ortie"
 }

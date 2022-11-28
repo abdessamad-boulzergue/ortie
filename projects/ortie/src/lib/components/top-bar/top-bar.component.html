@@ -1,0 +1,23 @@
+<ng-template [ngIf]="_logoTemplate != null" [ngTemplateOutlet]="_logoTemplate!"></ng-template>
+<div class="spacer"></div>
+<ng-content></ng-content>
+<ng-container *ngIf="actions && actions.length > 0">
+  <div class="actions">
+    <ng-container *ngIf="actions != null && actions.length > 0">
+      <ng-template [ngIf]="_actionRefs != null" [ngIfElse]="defaultAction" >
+        <ng-container *ngFor="let action of actions">
+          <ng-container [ngTemplateOutlet]="_getActionTemplateRef(action.id) != null ? _getActionTemplateRef(action.id)! : defaultAction" [ngTemplateOutletContext]="{$implicit:action}"></ng-container>
+        </ng-container>
+      </ng-template>
+
+      <ng-template #defaultAction let-action>
+        <cb-topbar-action [icon]="action.icon" [label]="action.label" (click)="action.onClick && action.onClick()"></cb-topbar-action>
+      </ng-template>
+    </ng-container>
+    <cb-topbar-separator *ngIf="actions.length > 0 && _userTemplateRef != null"></cb-topbar-separator>
+    <ng-container *ngIf="_userTemplateRef != null">
+      <ng-container [ngTemplateOutlet]="_userTemplateRef!.templateRef!"></ng-container>
+    </ng-container>
+  </div>
+</ng-container>
+

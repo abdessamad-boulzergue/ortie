@@ -1,0 +1,19 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "types": [],
+      "declaration": true,
+      "inlineSources": true,
+      "declarationMap": true,
+      "outDir": "../../out-tcs/lib",
+      "allowSyntheticDefaultImports": true
+    },
+    "exclude": [
+      "src/test.ts",
+      "src/**/*.spec.ts",
+      "**/*.spec.ts"
+    ],
+    "include": ["../../stories/**/*"],
+ 
+  }
+  

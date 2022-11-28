@@ -1,0 +1,13 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/ortie",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": [
+    "./src/style.css",
+    "./src/theme.css",
+    "./src/links.css",
+    "./src/assets"
+  ]
+}

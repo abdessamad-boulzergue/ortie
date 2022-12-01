@@ -1,18 +1,18 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {TopBarComponent} from './top-bar.component';
+import {ToolbarComponent} from './top-bar.component';
 
-describe('TopBarComponent', () => {
-  let component: TopBarComponent;
-  let fixture: ComponentFixture<TopBarComponent>;
+describe('ToolbarComponent', () => {
+  let component: ToolbarComponent;
+  let fixture: ComponentFixture<ToolbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TopBarComponent],
+      declarations: [ToolbarComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopBarComponent);
+    fixture = TestBed.createComponent(ToolbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -32,17 +32,17 @@ describe('TopBarComponent', () => {
     component._actionRefs.reset([
       {
         templateRef: 1 as any,
-        topBarAction: 'test',
+        ToolbarAction: 'test',
       },
     ]);
     expect(component._getActionTemplateRef('test')).toBeDefined();
   });
 
-  it('#_getActionTemplateRef should return the element with topBarAction="" or null if exists and the provided actionRef does not exist.', () => {
+  it('#_getActionTemplateRef should return the element with ToolbarAction="" or null if exists and the provided actionRef does not exist.', () => {
     component._actionRefs.reset([
       {
         templateRef: 1 as any,
-        topBarAction: '',
+        ToolbarAction: '',
       },
     ]);
     expect(component._getActionTemplateRef('test')).toBeDefined();
@@ -52,7 +52,7 @@ describe('TopBarComponent', () => {
     component._actionRefs.reset([
       {
         templateRef: 1 as any,
-        topBarAction: 'test',
+        ToolbarAction: 'test',
       },
     ]);
     expect(component._getActionTemplateRef('testnotexists')).toBeUndefined();

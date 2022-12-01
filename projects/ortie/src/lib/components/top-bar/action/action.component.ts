@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'cb-topbar-action',
+  selector: 'ort-toolbar-action',
   templateUrl: './action.component.html',
   styleUrls: ['./action.component.css'],
 })

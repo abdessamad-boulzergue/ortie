@@ -1,30 +1,30 @@
 import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
-import {TopBarActionDirective} from './action/action.directive';
-import {TopBarSeparatorComponent} from './top-bar-separator/top-bar-separator.component';
-import {TopBarComponent} from './top-bar.component';
+import {ToolbarActionDirective} from './action/action.directive';
+import {ToolbarSeparatorComponent} from './top-bar-separator/top-bar-separator.component';
+import {ToolbarComponent} from './top-bar.component';
 import {UserComponent} from './user/user.component';
-import {TopBarUserDirective} from './user/user.directive';
+import {ToolbarUserDirective} from './user/user.directive';
 import {MatIconModule} from '@angular/material/icon';
 import { ActionComponent } from './action/action.component';
 @NgModule({
   declarations: [
-    TopBarComponent,
+    ToolbarComponent,
     UserComponent,
-    TopBarActionDirective,
-    TopBarUserDirective,
-    TopBarSeparatorComponent,
+    ToolbarActionDirective,
+    ToolbarUserDirective,
+    ToolbarSeparatorComponent,
     ActionComponent
   ],
   imports: [CommonModule, RouterModule,MatIconModule],
   exports: [
-    TopBarComponent,
+    ToolbarComponent,
     UserComponent,
-    TopBarActionDirective,
-    TopBarUserDirective,
-    TopBarSeparatorComponent,
+    ToolbarActionDirective,
+    ToolbarUserDirective,
+    ToolbarSeparatorComponent,
     ActionComponent
   ],
 })
-export class TopBarModule {}
+export class ToolbarModule {}

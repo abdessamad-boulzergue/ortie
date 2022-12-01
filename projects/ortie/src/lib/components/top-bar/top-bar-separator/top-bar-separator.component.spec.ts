@@ -1,19 +1,19 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {TopBarSeparatorComponent} from './top-bar-separator.component';
+import {ToolbarSeparatorComponent} from './top-bar-separator.component';
 
-describe('TopBarSeparatorComponent', () => {
-  let component: TopBarSeparatorComponent;
-  let fixture: ComponentFixture<TopBarSeparatorComponent>;
+describe('ToolbarSeparatorComponent', () => {
+  let component: ToolbarSeparatorComponent;
+  let fixture: ComponentFixture<ToolbarSeparatorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [TopBarSeparatorComponent],
+      declarations: [ToolbarSeparatorComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TopBarSeparatorComponent);
+    fixture = TestBed.createComponent(ToolbarSeparatorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

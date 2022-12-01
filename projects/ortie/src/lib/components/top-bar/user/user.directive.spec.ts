@@ -1,14 +1,14 @@
 import {Component, TemplateRef, ViewChild} from '@angular/core';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
-import {TopBarUserDirective} from './user.directive';
+import {ToolbarUserDirective} from './user.directive';
 
-describe('TopBarUserDirective', () => {
+describe('ToolbarUserDirective', () => {
   let fixture: ComponentFixture<TestComponent>;
   let component: TestComponent;
 
   beforeEach(async () => {
     fixture = TestBed.configureTestingModule({
-      declarations: [TestComponent, TopBarUserDirective],
+      declarations: [TestComponent, ToolbarUserDirective],
     }).createComponent(TestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -20,9 +20,9 @@ describe('TopBarUserDirective', () => {
 
 @Component({
   template: `
-    <ng-template topBarUser></ng-template>
+    <ng-template toolbarUser></ng-template>
   `,
 })
 class TestComponent {
-  @ViewChild(TemplateRef, {static: true}) template!: TemplateRef<TopBarUserDirective>;
+  @ViewChild(TemplateRef, {static: true}) template!: TemplateRef<ToolbarUserDirective>;
 }

@@ -1,5 +1,5 @@
 import { ArgTypes, Meta, moduleMetadata, Story } from '@storybook/angular';
-import { TopBarModule } from 'projects/ortie/src/lib/components/top-bar/top-bar.module';
+import { ToolbarModule } from 'projects/ortie/src/lib/components/top-bar/top-bar.module';
 
 import { ActionComponent } from 'projects/ortie/src/lib/components/top-bar/action/action.component';
 export default { 
@@ -7,7 +7,7 @@ export default {
      decorators: [
         moduleMetadata({
         declarations: [],
-        imports: [TopBarModule,],
+        imports: [ToolbarModule,],
         }), 
     ],
  title: 'Components/Header',
@@ -28,8 +28,8 @@ const Template: Story<ActionComponent> = args => ({
     props: {...args, }, 
     styles: [], 
     template: `
-            <cb-topbar-action  [icon]="icon" [label]="label"
-            ></cb-topbar-action>
+            <ort-toolbar-action  [icon]="icon" [label]="label"
+            ></ort-toolbar-action>
         `,
     });
 export const ToolBarAction = Template.bind({});

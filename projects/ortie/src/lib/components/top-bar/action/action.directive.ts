@@ -2,10 +2,10 @@ import {Directive, Input, TemplateRef} from '@angular/core';
 import {ActionComponent} from './action.component';
 
 @Directive({
-  selector: 'ng-template.[topBarAction]',
+  selector: 'ng-template.[toolBarAction]',
 })
-export class TopBarActionDirective {
-  @Input() public topBarAction?: string;
+export class ToolbarActionDirective {
+  @Input() public toolbarAction?: string;
 
   constructor(public templateRef: TemplateRef<ActionComponent>) {}
 }

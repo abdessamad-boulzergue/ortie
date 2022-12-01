@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core"
 import ButtonComponent from "./components/button/button.component"
-import { TopBarComponent } from "./components/top-bar/top-bar.component"
+import { ToolbarComponent } from "./components/top-bar/top-bar.component"
 import { ActionComponent } from "./components/top-bar/action/action.component"
 import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     ButtonComponent,
-    TopBarComponent,
+    ToolbarComponent,
     ActionComponent
 
     ],
@@ -16,7 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
   ],
   exports: [
     ButtonComponent,
-    TopBarComponent,
+    ToolbarComponent,
     ActionComponent
     ]
 })

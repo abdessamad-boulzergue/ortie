@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 
 @Component({
-  selector: 'cb-topbar-separator',
+  selector: 'ort-toolbar-separator',
   templateUrl: './top-bar-separator.component.html',
   styleUrls: ['./top-bar-separator.component.css'],
 })
-export class TopBarSeparatorComponent {}
+export class ToolbarSeparatorComponent {}

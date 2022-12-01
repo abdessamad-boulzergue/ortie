@@ -1,6 +1,6 @@
 {
-  "name": "my-workspace",
-  "version": "0.0.0",
+  "name": "@abdos/ortie",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -11,7 +11,7 @@
     "storybook": "ng run ortie:storybook",
     "build-storybook": "npm run docs:json && build-storybook"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~13.2.0",
     "@angular/cdk": "^13.3.9",
@@ -52,5 +52,17 @@
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^13.0.0",
     "typescript": "~4.5.2"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdessamad-boulzergue/ortie.git"
+  },
+  "author": "abdosblz@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdessamad-boulzergue/ortie/issues"
+  },
+  "homepage": "https://github.com/abdessamad-boulzergue/ortie#readme"
 }

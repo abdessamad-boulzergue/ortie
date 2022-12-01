@@ -2,8 +2,8 @@ import {Directive, TemplateRef} from '@angular/core';
 import {UserComponent} from './user.component';
 
 @Directive({
-  selector: 'ng-template.[topBarUser]',
+  selector: 'ng-template.[toolbarUser]',
 })
-export class TopBarUserDirective {
+export class ToolbarUserDirective {
   constructor(public templateRef: TemplateRef<UserComponent>) {}
 }

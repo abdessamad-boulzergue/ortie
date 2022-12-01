@@ -1,7 +1,7 @@
 import {Component, HostBinding, Input} from '@angular/core';
 
 @Component({
-  selector: 'cb-topbar-user',
+  selector: 'ort-toolbar-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css'],
 })

@@ -1,39 +1,39 @@
 import { ArgTypes, Meta, moduleMetadata, Story } from '@storybook/angular';
-import { TopBarComponent, TopBarPosition} from 'projects/ortie/src/lib/components/top-bar/top-bar.component';
-import { TopBarModule } from 'projects/ortie/src/lib/components/top-bar/top-bar.module';
+import { ToolbarComponent, ToolbarPosition} from 'projects/ortie/src/lib/components/top-bar/top-bar.component';
+import { ToolbarModule } from 'projects/ortie/src/lib/components/top-bar/top-bar.module';
 
 export default { 
-    component: TopBarComponent,
+    component: ToolbarComponent,
      decorators: [
 moduleMetadata({
  declarations: [],
- imports: [TopBarModule,],
+ imports: [ToolbarModule,],
 }), ],
  title: 'Components/Header',
   excludeStories: /.*Data$/,
    argTypes: {
         position: {
         control: {type: 'select'},
-        options: ['fixed', 'absolute', 'relative', 'static'] as Array<TopBarPosition>,
+        options: ['fixed', 'absolute', 'relative', 'static'] as Array<ToolbarPosition>,
         },
         actions: {
         control: {type: 'array',}
         } 
     } as ArgTypes,
-} as Meta<TopBarComponent>;
+} as Meta<ToolbarComponent>;
 
-const Template: Story<TopBarComponent> = args => ({ 
+const Template: Story<ToolbarComponent> = args => ({ 
     props: {...args, }, 
     styles: [], 
     template: `
-            <cb-top-bar [actions]="actions" [position]="position">
+            <ort-toolbar [actions]="actions" [position]="position">
                 <ng-template #logo>
                 <img src="/assets/flow.svg" />
                 </ng-template>
-                <ng-template topBarUser>
-                <cb-topbar-user firstname="first name"></cb-topbar-user>
+                <ng-template toolbarUser>
+                <ort-toolbar-user firstname="first name"></ort-toolbar-user>
                 </ng-template> 
-            </cb-top-bar>
+            </ort-toolbar>
          `,
     });
 export const ToolBar = Template.bind({});

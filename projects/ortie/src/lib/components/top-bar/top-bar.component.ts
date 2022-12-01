@@ -10,24 +10,24 @@ import {
   TemplateRef,
 } from '@angular/core';
 import {ActionComponent} from './action/action.component';
-import {TopBarActionDirective} from './action/action.directive';
-import {TopBarUserDirective} from './user/user.directive';
+import {ToolbarActionDirective} from './action/action.directive';
+import {ToolbarUserDirective} from './user/user.directive';
 
 @Component({
-  selector: 'cb-top-bar',
+  selector: 'ort-toolbar',
   templateUrl: './top-bar.component.html',
   styleUrls: ['./top-bar.component.css'],
 })
-export class TopBarComponent implements OnInit {
-  @ContentChildren(TopBarActionDirective) _actionRefs!: QueryList<TopBarActionDirective>;
-  @ContentChild(TopBarUserDirective) _userTemplateRef?: TopBarUserDirective;
+export class ToolbarComponent implements OnInit {
+  @ContentChildren(ToolbarActionDirective) _actionRefs!: QueryList<ToolbarActionDirective>;
+  @ContentChild(ToolbarUserDirective) _userTemplateRef?: ToolbarUserDirective;
   @ContentChild('logo') _logoTemplate?: TemplateRef<HTMLElement>;
 
-  @Input() actions: TopBarAction[] = [];
+  @Input() actions: ToolbarAction[] = [];
 
   @HostBinding('style.position')
   @Input()
-  position: TopBarPosition = 'static';
+  position: ToolbarPosition = 'static';
 
   constructor(private elRef: ElementRef) {
     this.elRef.nativeElement.style.position = this.position;
@@ -44,9 +44,9 @@ export class TopBarComponent implements OnInit {
    * @return {TemplateRef<ActionComponent> | undefined}
    */
   _getActionTemplateRef(actionName: string): TemplateRef<ActionComponent> | undefined {
-    const found = this._actionRefs.find(e => e.topBarAction == actionName);
+    const found = this._actionRefs.find(e => e.toolbarAction == actionName);
     if (found == null) {
-      return this._actionRefs.find(e => e.topBarAction == '' || e.topBarAction == null)
+      return this._actionRefs.find(e => e.toolbarAction == '' || e.toolbarAction == null)
         ?.templateRef;
     } else {
       return found.templateRef;
@@ -54,9 +54,9 @@ export class TopBarComponent implements OnInit {
   }
 }
 
-export interface TopBarAction {
+export interface ToolbarAction {
   id: string;
-  type?: TopBarActionType;
+  type?: ToolbarActionType;
   label?: string;
   icon?: string;
   onClick?: () => void;
@@ -64,5 +64,5 @@ export interface TopBarAction {
   link?: string;
 }
 
-export type TopBarPosition = 'absolute' | 'fixed' | 'static' | 'relative';
-export type TopBarActionType = 'icon' | 'link';
+export type ToolbarPosition = 'absolute' | 'fixed' | 'static' | 'relative';
+export type ToolbarActionType = 'icon' | 'link';

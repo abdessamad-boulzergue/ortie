@@ -11,10 +11,10 @@
       </ng-template>
 
       <ng-template #defaultAction let-action>
-        <cb-topbar-action [icon]="action.icon" [label]="action.label" (click)="action.onClick && action.onClick()"></cb-topbar-action>
+        <ort-toolbar-action [icon]="action.icon" [label]="action.label" (click)="action.onClick && action.onClick()"></ort-toolbar-action>
       </ng-template>
     </ng-container>
-    <cb-topbar-separator *ngIf="actions.length > 0 && _userTemplateRef != null"></cb-topbar-separator>
+    <ort-toolbar-separator *ngIf="actions.length > 0 && _userTemplateRef != null"></ort-toolbar-separator>
     <ng-container *ngIf="_userTemplateRef != null">
       <ng-container [ngTemplateOutlet]="_userTemplateRef!.templateRef!"></ng-container>
     </ng-container>

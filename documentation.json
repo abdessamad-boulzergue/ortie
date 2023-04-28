@@ -107,11 +107,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/card/card.stories.ts",
+                "file": "stories/templates/grid.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<CardComponent>",
-                "defaultValue": "(args: CardComponent) => ({\r\n    props: args,\r\n    template:'<ort-card> hello card </ort-card>'\r\n  })"
+                "type": "Story<GridComponent>",
+                "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
             },
             {
                 "name": "Template",
@@ -127,21 +127,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/templates/grid.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<GridComponent>",
-                "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSColumns\"\r\n      [column.sm]=\"SMColumns\"\r\n      [column.md]=\"MDColumns\"\r\n      [column.lg]=\"LGColumns\"\r\n      [column.xlg]=\"XLGColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/toolbar/toolbar-action.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<ActionComponent>",
                 "defaultValue": "args => ({ \r\n    props: {...args, }, \r\n    styles: [], \r\n    template: `\r\n            <ort-toolbar-action  [icon]=\"icon\" [label]=\"label\"\r\n            ></ort-toolbar-action>\r\n        `,\r\n    })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CardComponent>",
+                "defaultValue": "(args: CardComponent) => ({\r\n    props: args,\r\n    template:'<ort-card> hello card </ort-card>'\r\n  })"
             },
             {
                 "name": "Template",
@@ -219,7 +219,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<GridComponent>",
-                    "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSColumns\"\r\n      [column.sm]=\"SMColumns\"\r\n      [column.md]=\"MDColumns\"\r\n      [column.lg]=\"LGColumns\"\r\n      [column.xlg]=\"XLGColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
+                    "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
                 }
             ],
             "stories/Button.stories.ts": [

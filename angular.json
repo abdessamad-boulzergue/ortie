@@ -47,5 +47,7 @@
       }
     }
   },
-  "defaultProject": "@abdos/ortie"
+  "cli": {
+    "analytics": false
+  }
 }

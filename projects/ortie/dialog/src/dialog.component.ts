@@ -8,7 +8,8 @@ import {DialogRef} from '@angular/cdk/dialog';
   })
 export class DialogComponent {
   constructor(public dialog: DialogRef) {}
- 
+
+
 
   @Input('width') width?: number;
   @Input('type') severity: DialogType = 'info';

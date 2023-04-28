@@ -1,2 +1,16 @@
-<ng-content></ng-content>
+<div class="modal-container" [ngStyle]="{width: _width}">
+    <header   [ngClass]="severity">
+      <div class="title">
+        title
+      </div>
+    </header>
+    <div class="content" #content  >
+       content
+    </div>
+    <footer class="footer"   #footer>
+      footer
+    </footer>
+  
+    <ort-button class="close" title="X" icon="ic-x" type="ghost" (click)="_onClose()"></ort-button>
+  </div>
   

@@ -1,15 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'storybook-button',
-  template: ` <button
-    type="button"
-    (click)="onClick.emit($event)"
-    [class]="classes"
-    [style]="{ 'background-color': backgroundColor }"
-  >
-    {{ label }}
-  </button>`,
+  selector: 'ort-button',
+  templateUrl : './button.component.html',
   styleUrls: ['./button.css'],
 })
 export  class ButtonComponent {
@@ -37,7 +30,14 @@ export  class ButtonComponent {
    * @required
    */
   @Input()
-  label = 'Button';
+  title = '';
+
+  @Input()
+  iconHead : string ='';
+
+  
+  @Input()
+  iconTail : string ='';
 
   /**
    * Optional click handler
@@ -46,8 +46,8 @@ export  class ButtonComponent {
   onClick = new EventEmitter<Event>();
 
   public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
+    const mode = this.primary ? 'ort-button--primary' : 'ort-button--secondary';
+    return ['ort-button', `ort-button--${this.size}`, mode];
   }
+
 }

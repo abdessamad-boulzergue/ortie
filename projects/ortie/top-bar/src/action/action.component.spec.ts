@@ -23,18 +23,18 @@ describe('ActionComponent', () => {
   });
 
   it('Should have an icon', () => {
-    component.icon = 'ic-cobalt';
+    component.icon = 'ic-ort';
     fixture.detectChanges();
-    expect(fixture.debugElement.query(By.css('.ic-cobalt.icon')).nativeElement.innerHTML).toContain(
-      'ic-cobalt',
+    expect(fixture.debugElement.query(By.css('.ic-ort.icon')).nativeElement.innerHTML).toContain(
+      'ic-ort',
     );
   });
 
   it('Should have a label', () => {
-    component.label = 'ic-cobalt';
+    component.label = 'ic-ort';
     fixture.detectChanges();
     expect(fixture.debugElement.query(By.css('.label')).nativeElement.innerHTML).toContain(
-      'ic-cobalt',
+      'ic-ort',
     );
   });
 });

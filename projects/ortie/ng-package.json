@@ -6,9 +6,9 @@
     "cssUrl":"inline"
   },
   "assets": [
-    "./src/style.css",
-    "./src/theme.css",
-    "./src/links.css",
+    "./src/style.scss",
+    "./src/theme.scss",
+    "./src/links.scss",
     "./src/assets"
   ]
 }

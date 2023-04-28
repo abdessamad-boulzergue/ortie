@@ -12,11 +12,8 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ortie": [
-        "projects/ortie/src/public-api",
-        "dist/ortie/ortie",
-        "dist/ortie"
-      ]
+      "@abdos/ortie": ["projects/ortie"],
+      "@abdos/ortie/*": ["projects/ortie/*"],
     },
     "declaration": false,
     "downlevelIteration": true,

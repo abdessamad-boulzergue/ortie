@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
-    "storybook": "ng run ortie:storybook",
+    "storybook": "ng run @abdos/ortie:storybook",
     "build-storybook": "npm run docs:json && build-storybook"
   },
   "private": false,

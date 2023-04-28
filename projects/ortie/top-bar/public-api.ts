@@ -1,0 +1,5 @@
+export * from './src/top-bar.module'
+export * from './src/top-bar.component'
+export * from './src/top-bar-separator/top-bar-separator.component'
+export * from './src/action/action.component'
+export * from './src/action/action.directive'

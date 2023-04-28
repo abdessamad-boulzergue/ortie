@@ -1,6 +1,5 @@
 import { ArgTypes, Meta, moduleMetadata, Story } from '@storybook/angular';
-import { ToolbarComponent, ToolbarPosition} from 'projects/ortie/src/lib/components/top-bar/top-bar.component';
-import { ToolbarModule } from 'projects/ortie/src/lib/components/top-bar/top-bar.module';
+import { ToolbarComponent, ToolbarPosition , ToolbarModule} from '@abdos/ortie/top-bar';
 
 export default { 
     component: ToolbarComponent,

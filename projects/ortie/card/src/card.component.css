@@ -1,0 +1,6 @@
+:host{
+    background-color: var(--backgroud-white);
+    display: block;
+    padding: 12px;
+    box-shadow: 0px 5px 10px rgba(105, 105, 150, 0.1);
+}

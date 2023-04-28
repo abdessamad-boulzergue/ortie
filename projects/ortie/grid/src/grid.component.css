@@ -1,0 +1,6 @@
+:host{
+    
+    width: 100%;
+    grid-auto-rows: 1fr;
+    display: grid;
+}

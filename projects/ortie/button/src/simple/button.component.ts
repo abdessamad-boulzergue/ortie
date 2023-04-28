@@ -5,14 +5,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   template: ` <button
     type="button"
     (click)="onClick.emit($event)"
-    [ngClass]="classes"
-    [ngStyle]="{ 'background-color': backgroundColor }"
+    [class]="classes"
+    [style]="{ 'background-color': backgroundColor }"
   >
     {{ label }}
   </button>`,
   styleUrls: ['./button.css'],
 })
-export default class ButtonComponent {
+export  class ButtonComponent {
   /**
    * Is this the principal call to action on the page?
    */

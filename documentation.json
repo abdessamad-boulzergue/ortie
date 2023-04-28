@@ -3,12 +3,12 @@
     "interfaces": [
         {
             "name": "User",
-            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "id": "interface-User-dcc5c3137cd472dd0002d85b562efd23162e3eff53ca4438a6251e6c46e3b8299076255380d1d42f386510cb6f2cbaab49fa5b5f253be459cdc3869428c5c400",
             "file": "stories/User.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface User {}\n",
+            "sourceCode": "export interface User {}\r\n",
             "properties": [],
             "indexSignatures": [],
             "methods": []
@@ -24,6 +24,26 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "BasicCard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Grid",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/templates/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -38,6 +58,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "row",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/templates/row.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -70,8 +100,38 @@
                 "file": "stories/Button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CardComponent>",
+                "defaultValue": "(args: CardComponent) => ({\r\n    props: args,\r\n    template:'<ort-card> hello card </ort-card>'\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/templates/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<VerticalAlignComponent>",
+                "defaultValue": "(args: VerticalAlignComponent) => ({\r\n    props: args,\r\n    styles: [`  `],\r\n    template:`\r\n    <ort-vertical-align [width]=\"width\" [vposition]=\"vposition\"  [hposition]=\"hposition\" >\r\n       <span> first item</span>\r\n       <span> second item</span>\r\n       <span> third item</span>\r\n    </ort-vertical-align>\r\n    `\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/templates/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<GridComponent>",
+                "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSColumns\"\r\n      [column.sm]=\"SMColumns\"\r\n      [column.md]=\"MDColumns\"\r\n      [column.lg]=\"LGColumns\"\r\n      [column.xlg]=\"XLGColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
             },
             {
                 "name": "Template",
@@ -118,6 +178,50 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "stories/card/card.stories.ts": [
+                {
+                    "name": "BasicCard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/card/card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CardComponent>",
+                    "defaultValue": "(args: CardComponent) => ({\r\n    props: args,\r\n    template:'<ort-card> hello card </ort-card>'\r\n  })"
+                }
+            ],
+            "stories/templates/grid.stories.ts": [
+                {
+                    "name": "Grid",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/templates/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/templates/grid.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<GridComponent>",
+                    "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSColumns\"\r\n      [column.sm]=\"SMColumns\"\r\n      [column.md]=\"MDColumns\"\r\n      [column.lg]=\"LGColumns\"\r\n      [column.xlg]=\"XLGColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
+                }
+            ],
             "stories/Button.stories.ts": [
                 {
                     "name": "Large",
@@ -166,8 +270,30 @@
                     "file": "stories/Button.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/templates/row.stories.ts": [
+                {
+                    "name": "row",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/templates/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/templates/row.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<VerticalAlignComponent>",
+                    "defaultValue": "(args: VerticalAlignComponent) => ({\r\n    props: args,\r\n    styles: [`  `],\r\n    template:`\r\n    <ort-vertical-align [width]=\"width\" [vposition]=\"vposition\"  [hposition]=\"hposition\" >\r\n       <span> first item</span>\r\n       <span> second item</span>\r\n       <span> third item</span>\r\n    </ort-vertical-align>\r\n    `\r\n  })"
                 }
             ],
             "stories/toolbar/toolbar-action.stories.ts": [
@@ -279,6 +405,66 @@
                 "type": "interface",
                 "linktype": "interface",
                 "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/card/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BasicCard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/card/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/templates/grid.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Grid",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/templates/grid.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/templates/row.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "row",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/templates/row.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

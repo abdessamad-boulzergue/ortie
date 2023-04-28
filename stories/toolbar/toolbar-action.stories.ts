@@ -1,7 +1,5 @@
 import { ArgTypes, Meta, moduleMetadata, Story } from '@storybook/angular';
-import { ToolbarModule } from 'projects/ortie/src/lib/components/top-bar/top-bar.module';
-
-import { ActionComponent } from 'projects/ortie/src/lib/components/top-bar/action/action.component';
+import { ToolbarModule ,ActionComponent} from '@abdos/ortie/top-bar';
 export default { 
     component: ActionComponent,
      decorators: [

@@ -1,0 +1,119 @@
+:host {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  :host .modal-container {
+    display: inline-block;
+    max-width: 680px !important;
+    max-height: 600px;
+    box-sizing: border-box;
+    background: #ffffff;
+    box-shadow: 0px 12px 24px rgba(102, 109, 146, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    position: relative;
+    pointer-events: auto;
+  }
+  
+  :host .close {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    right: -56px;
+    top: 0;
+    box-shadow: 0px 12px 24px rgba(102, 109, 146, 0.2);
+  }
+  
+  :host header {
+    position: relative;
+    padding: 24px;
+    border-bottom: 1px solid var(--disabled-background-color);
+    box-sizing: border-box;
+  }
+  
+  :host header .title {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: -0.01em;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 12px;
+  }
+  
+  :host header.info,
+  :host header {
+    background-color: var(--info-background-color);
+    color: var(--info-text-color);
+  }
+  
+  :host header.info ::ng-deep *,
+  :host header ::ng-deep * {
+    color: var(--info-text-color) !important;
+  }
+  
+  :host header.info ::ng-deep cb-icon {
+    color: var(--info-icon-color) !important;
+  }
+  
+  :host header.error {
+    background-color: var(--error-background-color);
+    color: var(--error-text-color);
+  }
+  :host header.error ::ng-deep * {
+    color: var(--error-text-color) !important;
+  }
+  
+  :host header.success {
+    background-color: var(--success-background-color);
+    color: var(--success-text-color);
+  }
+  :host header.success ::ng-deep * {
+    color: var(--success-text-color) !important;
+  }
+  
+  :host header.warning {
+    background-color: var(--warning-background-color);
+    color: var(--warning-text-color);
+  }
+  :host header.warning ::ng-deep * {
+    color: var(--warning-text-color) !important;
+  }
+  
+  :host .content {
+    padding: 24px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-height: 380px;
+  }
+  
+  :host footer {
+    padding: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 24px;
+    box-sizing: border-box;
+  }
+  
+  :host.scrollable footer {
+    border-top: 1px solid var(--disabled-background-color);
+  }
+  

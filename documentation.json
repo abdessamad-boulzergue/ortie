@@ -19,7 +19,190 @@
     "interceptors": [],
     "classes": [],
     "directives": [],
-    "components": [],
+    "components": [
+        {
+            "name": "DialogComponent",
+            "id": "component-DialogComponent-e8b20784b0d71f241a6a5dd881d382505e06912c9a4e2fe969d726210c0eb98bee5ae855763907204b5065ea05598764ef8e3590769d0ea90b4bbcc60729809c",
+            "file": "stories/dialog/dialog.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "styleUrls": [],
+            "styles": [],
+            "template": "<ort-dialog [type]=\"severity\" [width]=\"width\">\n  <ng-template modalTitle>Title</ng-template>\n  <ng-template modalContent>Content</ng-template>\n  <ng-template modalActions>\n      <ort-button size=\"small\" title=\"close\" (click)=\"closeDialog()\"></ort-button>\n      </ng-template>\n</ort-dialog>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "severity",
+                    "defaultValue": "'info'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 29,
+                    "type": "DialogType",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "200",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 28,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "closeDialog",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component ,Input,Output,EventEmitter} from '@angular/core';\r\nimport { Dialog, DialogModule, DialogRef, DialogRole } from \"@angular/cdk/dialog\";\r\nimport { Story, Meta } from '@storybook/angular/types-6-0';\r\nimport { ButtonsModule } from '@abdos/ortie/button';\r\nimport { DialogType , DialogModule as ortDialogModule} from '@abdos/ortie/dialog';\r\n\r\n\r\n\r\n@Component({\r\n    // component metadata\r\n    template: `\r\n      <ort-dialog [type]=\"severity\" [width]=\"width\">\r\n        <ng-template modalTitle>Title</ng-template>\r\n        <ng-template modalContent>Content</ng-template>\r\n        <ng-template modalActions>\r\n            <ort-button size=\"small\" title=\"close\" (click)=\"closeDialog()\"></ort-button>\r\n            </ng-template>\r\n      </ort-dialog>\r\n    `,\r\n    standalone: true,\r\n    imports: [\r\n        ortDialogModule,\r\n      ButtonsModule\r\n    ]\r\n  })\r\n class DialogComponent {\r\n\r\n    @Input() width: number = 200;\r\n    @Input() severity: DialogType = 'info';\r\n  \r\n    constructor(private dialogRef: DialogRef) {}\r\n  \r\n    closeDialog() {\r\n      this.dialogRef.close();\r\n    }\r\n  }\r\n\r\n@Component({\r\n    // component metadata.\r\n    selector: 'modal-example',\r\n    template: `\r\n      <ort-button (click)=\"openDialog()\" title=\"open dialog\" ></ort-button>\r\n    `,\r\n    standalone: true,\r\n    imports: [ButtonsModule, DialogModule]\r\n  })\r\n   class ExampleComponent {\r\n  \r\n    @Input() width: number = 200;\r\n    @Input() severity: DialogType= 'info';\r\n  \r\n    @Output() closed: EventEmitter<any> = new EventEmitter();\r\n  \r\n    constructor(private dialog: Dialog) {}\r\n  \r\n    openDialog() {\r\n        console.log(this.dialog)\r\n      this.dialog.open(DialogComponent).closed.subscribe(() => {\r\n        this.closed.emit();\r\n      });\r\n    }\r\n  }\r\nexport default {\r\n    title: 'Dialog/dialog',\r\n    component: ExampleComponent,\r\n    // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes\r\n    argTypes: { },\r\n  } as Meta;\r\n\r\n  const Template: Story<ExampleComponent> = (args: ExampleComponent) => ({\r\n    props: args,\r\n    template:'<modal-example [severity]=\"severity\" [width]=\"width ?? 200\"  ></modal-example>'\r\n  });\r\n\r\n  export const BasicDialog = Template.bind({});\r\n  BasicDialog.args={\r\n    severity:'info',\r\n    width:100\r\n  }",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dialogRef",
+                        "type": "DialogRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 29,
+                "jsdoctags": [
+                    {
+                        "name": "dialogRef",
+                        "type": "DialogRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "name": "ExampleComponent",
+            "id": "component-ExampleComponent-e8b20784b0d71f241a6a5dd881d382505e06912c9a4e2fe969d726210c0eb98bee5ae855763907204b5065ea05598764ef8e3590769d0ea90b4bbcc60729809c",
+            "file": "stories/dialog/dialog.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "modal-example",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<ort-button (click)=\"openDialog()\" title=\"open dialog\" ></ort-button>\n",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "severity",
+                    "defaultValue": "'info'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 50,
+                    "type": "DialogType",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "200",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 49,
+                    "type": "number",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "closed",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 52,
+                    "type": "EventEmitter<any>"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "openDialog",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 56,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component ,Input,Output,EventEmitter} from '@angular/core';\r\nimport { Dialog, DialogModule, DialogRef, DialogRole } from \"@angular/cdk/dialog\";\r\nimport { Story, Meta } from '@storybook/angular/types-6-0';\r\nimport { ButtonsModule } from '@abdos/ortie/button';\r\nimport { DialogType , DialogModule as ortDialogModule} from '@abdos/ortie/dialog';\r\n\r\n\r\n\r\n@Component({\r\n    // component metadata\r\n    template: `\r\n      <ort-dialog [type]=\"severity\" [width]=\"width\">\r\n        <ng-template modalTitle>Title</ng-template>\r\n        <ng-template modalContent>Content</ng-template>\r\n        <ng-template modalActions>\r\n            <ort-button size=\"small\" title=\"close\" (click)=\"closeDialog()\"></ort-button>\r\n            </ng-template>\r\n      </ort-dialog>\r\n    `,\r\n    standalone: true,\r\n    imports: [\r\n        ortDialogModule,\r\n      ButtonsModule\r\n    ]\r\n  })\r\n class DialogComponent {\r\n\r\n    @Input() width: number = 200;\r\n    @Input() severity: DialogType = 'info';\r\n  \r\n    constructor(private dialogRef: DialogRef) {}\r\n  \r\n    closeDialog() {\r\n      this.dialogRef.close();\r\n    }\r\n  }\r\n\r\n@Component({\r\n    // component metadata.\r\n    selector: 'modal-example',\r\n    template: `\r\n      <ort-button (click)=\"openDialog()\" title=\"open dialog\" ></ort-button>\r\n    `,\r\n    standalone: true,\r\n    imports: [ButtonsModule, DialogModule]\r\n  })\r\n   class ExampleComponent {\r\n  \r\n    @Input() width: number = 200;\r\n    @Input() severity: DialogType= 'info';\r\n  \r\n    @Output() closed: EventEmitter<any> = new EventEmitter();\r\n  \r\n    constructor(private dialog: Dialog) {}\r\n  \r\n    openDialog() {\r\n        console.log(this.dialog)\r\n      this.dialog.open(DialogComponent).closed.subscribe(() => {\r\n        this.closed.emit();\r\n      });\r\n    }\r\n  }\r\nexport default {\r\n    title: 'Dialog/dialog',\r\n    component: ExampleComponent,\r\n    // More on argTypes: https://storybook.js.org/docs/angular/api/argtypes\r\n    argTypes: { },\r\n  } as Meta;\r\n\r\n  const Template: Story<ExampleComponent> = (args: ExampleComponent) => ({\r\n    props: args,\r\n    template:'<modal-example [severity]=\"severity\" [width]=\"width ?? 200\"  ></modal-example>'\r\n  });\r\n\r\n  export const BasicDialog = Template.bind({});\r\n  BasicDialog.args={\r\n    severity:'info',\r\n    width:100\r\n  }",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dialog",
+                        "type": "Dialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 52,
+                "jsdoctags": [
+                    {
+                        "name": "dialog",
+                        "type": "Dialog",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
     "modules": [],
     "miscellaneous": {
         "variables": [
@@ -28,6 +211,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/card/card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "BasicDialog",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/dialog/dialog.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -48,6 +241,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "PaymentForm",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/froms/payment.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -117,11 +320,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/templates/row.stories.ts",
+                "file": "stories/froms/payment.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<VerticalAlignComponent>",
-                "defaultValue": "(args: VerticalAlignComponent) => ({\r\n    props: args,\r\n    styles: [`  `],\r\n    template:`\r\n    <ort-vertical-align [width]=\"width\" [vposition]=\"vposition\"  [hposition]=\"hposition\" >\r\n       <span> first item</span>\r\n       <span> second item</span>\r\n       <span> third item</span>\r\n    </ort-vertical-align>\r\n    `\r\n  })"
+                "type": "Story<PaymentComponent>",
+                "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> </ort-payment-form>'\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/dialog/dialog.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<ExampleComponent>",
+                "defaultValue": "(args: ExampleComponent) => ({\r\n    props: args,\r\n    template:'<modal-example [severity]=\"severity\" [width]=\"width ?? 200\"  ></modal-example>'\r\n  })"
             },
             {
                 "name": "Template",
@@ -132,6 +345,16 @@
                 "deprecationMessage": "",
                 "type": "Story<GridComponent>",
                 "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/templates/row.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<VerticalAlignComponent>",
+                "defaultValue": "(args: VerticalAlignComponent) => ({\r\n    props: args,\r\n    styles: [`  `],\r\n    template:`\r\n    <ort-vertical-align [width]=\"width\" [vposition]=\"vposition\"  [hposition]=\"hposition\" >\r\n       <span> first item</span>\r\n       <span> second item</span>\r\n       <span> third item</span>\r\n    </ort-vertical-align>\r\n    `\r\n  })"
             },
             {
                 "name": "Template",
@@ -198,6 +421,28 @@
                     "deprecationMessage": "",
                     "type": "Story<CardComponent>",
                     "defaultValue": "(args: CardComponent) => ({\r\n    props: args,\r\n    template:'<ort-card> hello card </ort-card>'\r\n  })"
+                }
+            ],
+            "stories/dialog/dialog.stories.ts": [
+                {
+                    "name": "BasicDialog",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/dialog/dialog.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/dialog/dialog.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<ExampleComponent>",
+                    "defaultValue": "(args: ExampleComponent) => ({\r\n    props: args,\r\n    template:'<modal-example [severity]=\"severity\" [width]=\"width ?? 200\"  ></modal-example>'\r\n  })"
                 }
             ],
             "stories/templates/grid.stories.ts": [
@@ -272,6 +517,28 @@
                     "deprecationMessage": "",
                     "type": "Story<ButtonComponent>",
                     "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "stories/froms/payment.stories.ts": [
+                {
+                    "name": "PaymentForm",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/froms/payment.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/froms/payment.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<PaymentComponent>",
+                    "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> </ort-payment-form>'\r\n  })"
                 }
             ],
             "stories/templates/row.stories.ts": [
@@ -421,6 +688,64 @@
             },
             {
                 "filePath": "stories/card/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/dialog/dialog.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DialogComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/dialog/dialog.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ExampleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/dialog/dialog.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BasicDialog",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/dialog/dialog.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/froms/payment.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "PaymentForm",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/froms/payment.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

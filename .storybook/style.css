@@ -1,5 +1,3 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
-@import url(./links.scss);
-@import url(./font-icons.scss);
-@import url(./theme.scss);
+@import url(../projects/ortie/src/style.scss);

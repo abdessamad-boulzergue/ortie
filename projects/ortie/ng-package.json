@@ -6,7 +6,7 @@
     "cssUrl":"inline"
   },
   "assets": [
-    "./src/style.scss",
+    "./src/style.css",
     "./src/theme.scss",
     "./src/links.scss",
     "./src/assets"

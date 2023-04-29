@@ -1,0 +1,19 @@
+<div class="input-form-field">
+
+    <label class="input-label" *ngIf="label">
+        {{label}}  
+    <mat-icon aria-hidden="false"  *ngIf="info != null" aria-label="label">info</mat-icon>    
+    </label>
+
+    <div class="input-wrapper">
+    
+      <mat-icon aria-hidden="false"  *ngIf="iconStart != null" aria-label="label">{{iconStart}}</mat-icon>
+      <ng-content></ng-content>
+      <mat-icon aria-hidden="false"  *ngIf="iconEnd != null" aria-label="label">{{iconEnd}}</mat-icon>
+
+    </div>
+    
+    <span class="input-caption" *ngIf="caption">{{caption}}</span>
+  
+  </div>
+  

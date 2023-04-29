@@ -13,6 +13,7 @@
       <ng-template #defaultAction let-action>
         <ort-toolbar-action [icon]="action.icon" [label]="action.label" (click)="action.onClick && action.onClick()"></ort-toolbar-action>
       </ng-template>
+      
     </ng-container>
     <ort-toolbar-separator *ngIf="actions.length > 0 && _userTemplateRef != null"></ort-toolbar-separator>
     <ng-container *ngIf="_userTemplateRef != null">

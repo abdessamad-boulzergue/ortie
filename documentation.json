@@ -237,6 +237,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "InteractiveCard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/card/intercative-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -320,16 +330,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/froms/payment.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<PaymentComponent>",
-                "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> </ort-payment-form>'\r\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/dialog/dialog.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -340,11 +340,31 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/card/intercative-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InteractiveCardComponent>",
+                "defaultValue": "(args: InteractiveCardComponent) => ({\r\n    props: args,\r\n    template:'<ort-interactive-card>  </ort-interactive-card>'\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/templates/grid.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<GridComponent>",
                 "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/froms/payment.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PaymentComponent>",
+                "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> payment service integration </ort-payment-form>'\r\n  })"
             },
             {
                 "name": "Template",
@@ -467,6 +487,28 @@
                     "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
                 }
             ],
+            "stories/card/intercative-card.stories.ts": [
+                {
+                    "name": "InteractiveCard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/card/intercative-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/card/intercative-card.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<InteractiveCardComponent>",
+                    "defaultValue": "(args: InteractiveCardComponent) => ({\r\n    props: args,\r\n    template:'<ort-interactive-card>  </ort-interactive-card>'\r\n  })"
+                }
+            ],
             "stories/Button.stories.ts": [
                 {
                     "name": "Large",
@@ -538,7 +580,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<PaymentComponent>",
-                    "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> </ort-payment-form>'\r\n  })"
+                    "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> payment service integration </ort-payment-form>'\r\n  })"
                 }
             ],
             "stories/templates/row.stories.ts": [
@@ -688,6 +730,26 @@
             },
             {
                 "filePath": "stories/card/card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/card/intercative-card.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "InteractiveCard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/card/intercative-card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

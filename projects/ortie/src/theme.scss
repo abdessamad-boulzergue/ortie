@@ -19,11 +19,17 @@
 --maroon: #800000;
 --navy: #000080;
 
---backgroud-white:var(--colors-white);
+--backgroundWhite:var(--white);
 --primary-text-color:#273062;
 --secondary-text-color:#5f627c;
 --disabled-background-color:#eddfdf;
 --action-background-hover:#6b7298;
 
+--p-spacing3:0.75rem;
+--p-colorBackgroundDeemphasize10: #e6e6e6;
+--borderRadius:5px;
+}
 
+.txt--black {
+    color: var(--black) !important;
 }

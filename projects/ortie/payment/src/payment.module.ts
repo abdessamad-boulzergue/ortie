@@ -6,13 +6,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NgModule}  from '@angular/core';
 import {CommonModule} from '@angular/common';
 import { PaymentComponent } from './payment.component';
 import { DialogModule } from '@abdos/ortie/dialog';
 import { TextInputModule } from '@abdos/ortie/inputs';
 import { CardModule } from '@abdos/ortie/card';
+import {ButtonsModule} from '@abdos/ortie/button'
+
 @NgModule({
     declarations:[PaymentComponent],
     imports:[
@@ -25,9 +26,9 @@ import { CardModule } from '@abdos/ortie/card';
         MatToolbarModule,
         ReactiveFormsModule,
         DialogModule,
-        BrowserAnimationsModule,
         TextInputModule,
-        CardModule
+        CardModule,
+        ButtonsModule
     ],
     exports:[PaymentComponent]
 })

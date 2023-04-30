@@ -1,6 +1,6 @@
 :host {
   height: 32px;
-  background: var(--background-white);
+  background: var(--backgroundWhite);
   border-radius: 20px;
   padding: 12px;
   box-sizing: border-box;

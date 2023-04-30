@@ -1,5 +1,5 @@
 :host {
-  background: var(--background-white);
+  background: var(--backgroundWhite);
   border-radius: 16px;
   height: 32px;
   cursor: pointer;

@@ -1,0 +1,12 @@
+<div class="slider-container" cdkScrollable>
+
+    <div class="arrow arrow-left" (click)="scrollLeft()">&#8249;</div>
+
+    <div class="card-wrapper" #cardWrapper>
+        <ng-content></ng-content>
+    </div>
+
+    <div class="arrow arrow-right" (click)="scrollRight()">&#8250;</div>
+
+</div>
+  

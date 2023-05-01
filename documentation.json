@@ -207,6 +207,16 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Banner",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/banner/banner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "BasicCard",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -231,6 +241,16 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "stories/templates/grid.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "HorizontalSlider",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/slider/slider.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -320,11 +340,51 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "stories/banner/banner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<BannerComponent>",
+                "defaultValue": "(args: BannerComponent) => ({\r\n    props: args,\r\n    template:`\r\n    <lib-banner></lib-banner>\r\n    `\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "stories/card/card.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<CardComponent>",
                 "defaultValue": "(args: CardComponent) => ({\r\n    props: args,\r\n    template:'<ort-card> hello card </ort-card>'\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/card/intercative-card.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<InteractiveCardComponent>",
+                "defaultValue": "(args: InteractiveCardComponent) => ({\r\n    props: args,\r\n    template:`\r\n    <div style=\"display:flex; flex-direction:row\">\r\n        <ort-interactive-card  [size]=\"{ width: '500px', height: '600px' }\" > \r\n\r\n        <h2 card-head>Card Title</h2>\r\n        <p card-head>This is the card's main content.</p>\r\n\r\n        <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n        src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n       alt=\"Placeholder Image\">\r\n\r\n       <p card-footer-left>Left text</p>\r\n       <button card-footer-right>Click me</button>\r\n       <button card-footer-right>Another button</button>\r\n\r\n        </ort-interactive-card>\r\n\r\n        \r\n        \r\n    <div style=\"display:flex; flex-direction:row\">\r\n    <ort-interactive-card  [size]=\"{ width: '500px', height: '600px' }\" > \r\n\r\n    <h2 card-head>Card Title</h2>\r\n    <p card-head>This is the card's main content.</p>\r\n\r\n    <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n    src=\"https://rituals.scene7.com/is/image/rituals/1115172-rituals-karma-2023-summer-box-of-joy-multi-2:4-by-3?wid=1280&hei=960\"\r\n   alt=\"Placeholder Image\">\r\n\r\n   <p card-footer-left>Left text</p>\r\n   <button card-footer-right>Click me</button>\r\n   <button card-footer-right>Another button</button>\r\n\r\n    </ort-interactive-card>\r\n\r\n    \r\n        </div>\r\n    `\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/froms/payment.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<PaymentComponent>",
+                "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> payment service integration </ort-payment-form>'\r\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "stories/slider/slider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SliderComponent>",
+                "defaultValue": "(args: SliderComponent) => ({\r\n    props: args,\r\n    template:`\r\n        <ort-slider>\r\n             \r\n      <ort-interactive-card slider-card [size]=\"{ width: '0px', height: '650px' }\" > \r\n\r\n      <h2 card-head>Card Title</h2>\r\n      <p card-head>This is the card's main content.</p>\r\n\r\n      <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n      src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n     alt=\"Placeholder Image\">\r\n\r\n     <p card-footer-left>Left text</p>\r\n     <button card-footer-right>Click me</button>\r\n     <button card-footer-right>Another button</button>\r\n\r\n      </ort-interactive-card>\r\n\r\n      <ort-interactive-card slider-card [size]=\"{ width: '450px', height: '650px' }\" > \r\n\r\n      <h2 card-head>Card 22</h2>\r\n      <p card-head>This is the card's main content.</p>\r\n\r\n      <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n      src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n     alt=\"Placeholder Image\">\r\n\r\n     <p card-footer-left>Left text</p>\r\n     <button card-footer-right>Click me</button>\r\n     <button card-footer-right>Another button</button>\r\n\r\n      </ort-interactive-card>\r\n      <ort-interactive-card slider-card [size]=\"{ width: '0px', height: '650px' }\" > \r\n\r\n      <h2 card-head>Card 22</h2>\r\n      <p card-head>This is the card's main content.</p>\r\n\r\n      <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n      src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n     alt=\"Placeholder Image\">\r\n\r\n     <p card-footer-left>Left text</p>\r\n     <button card-footer-right>Click me</button>\r\n     <button card-footer-right>Another button</button>\r\n\r\n      </ort-interactive-card>\r\n       </ort-slider>\r\n    `\r\n  })"
             },
             {
                 "name": "Template",
@@ -340,31 +400,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "stories/card/intercative-card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<InteractiveCardComponent>",
-                "defaultValue": "(args: InteractiveCardComponent) => ({\r\n    props: args,\r\n    template:'<ort-interactive-card>  </ort-interactive-card>'\r\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "stories/templates/grid.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<GridComponent>",
                 "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "stories/froms/payment.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<PaymentComponent>",
-                "defaultValue": "(args: PaymentComponent) => ({\r\n    props: args,\r\n    template:'<ort-payment-form> payment service integration </ort-payment-form>'\r\n  })"
             },
             {
                 "name": "Template",
@@ -421,6 +461,28 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "stories/banner/banner.stories.ts": [
+                {
+                    "name": "Banner",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/banner/banner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/banner/banner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<BannerComponent>",
+                    "defaultValue": "(args: BannerComponent) => ({\r\n    props: args,\r\n    template:`\r\n    <lib-banner></lib-banner>\r\n    `\r\n  })"
+                }
+            ],
             "stories/card/card.stories.ts": [
                 {
                     "name": "BasicCard",
@@ -487,6 +549,28 @@
                     "defaultValue": "(args: GridComponent) => ({\r\n    props: args,\r\n    styles: [`\r\n    ort-card {  background-color: #33458B; color: white }\r\n  `],\r\n    template:`\r\n    <ort-grid [rowGap]=\"rowGap\" [columnGap]=\"columnGap\"\r\n      [columns]=\"columns\"\r\n      [column.xs]=\"XSmallColumns\"\r\n      [column.sm]=\"SmallColumns\"\r\n      [column.md]=\"MediumColumns\"\r\n      [column.lg]=\"LargeColumns\"\r\n      [column.xlg]=\"XLargeColumns\"\r\n      [column.width]=\"columnWidth\"\r\n      [row.height]=\"rowHeight\"\r\n      >\r\n      <ort-card ortCellGrid  column.span=\"2\"  row.span=\"2\" >  start  </ort-card>\r\n\r\n        <ng-container *ngFor=\"let i of [1,2,3,4,5,6,7,8,9,10,12,13,14,15,16,17,18]\">\r\n          <ort-card>\r\n            {{i}}\r\n          </ort-card>\r\n        </ng-container>\r\n\r\n        <ort-card>  infinity  </ort-card>\r\n\r\n      </ort-grid>\r\n    `\r\n  })"
                 }
             ],
+            "stories/slider/slider.stories.ts": [
+                {
+                    "name": "HorizontalSlider",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/slider/slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "stories/slider/slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SliderComponent>",
+                    "defaultValue": "(args: SliderComponent) => ({\r\n    props: args,\r\n    template:`\r\n        <ort-slider>\r\n             \r\n      <ort-interactive-card slider-card [size]=\"{ width: '0px', height: '650px' }\" > \r\n\r\n      <h2 card-head>Card Title</h2>\r\n      <p card-head>This is the card's main content.</p>\r\n\r\n      <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n      src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n     alt=\"Placeholder Image\">\r\n\r\n     <p card-footer-left>Left text</p>\r\n     <button card-footer-right>Click me</button>\r\n     <button card-footer-right>Another button</button>\r\n\r\n      </ort-interactive-card>\r\n\r\n      <ort-interactive-card slider-card [size]=\"{ width: '450px', height: '650px' }\" > \r\n\r\n      <h2 card-head>Card 22</h2>\r\n      <p card-head>This is the card's main content.</p>\r\n\r\n      <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n      src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n     alt=\"Placeholder Image\">\r\n\r\n     <p card-footer-left>Left text</p>\r\n     <button card-footer-right>Click me</button>\r\n     <button card-footer-right>Another button</button>\r\n\r\n      </ort-interactive-card>\r\n      <ort-interactive-card slider-card [size]=\"{ width: '0px', height: '650px' }\" > \r\n\r\n      <h2 card-head>Card 22</h2>\r\n      <p card-head>This is the card's main content.</p>\r\n\r\n      <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n      src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n     alt=\"Placeholder Image\">\r\n\r\n     <p card-footer-left>Left text</p>\r\n     <button card-footer-right>Click me</button>\r\n     <button card-footer-right>Another button</button>\r\n\r\n      </ort-interactive-card>\r\n       </ort-slider>\r\n    `\r\n  })"
+                }
+            ],
             "stories/card/intercative-card.stories.ts": [
                 {
                     "name": "InteractiveCard",
@@ -506,7 +590,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<InteractiveCardComponent>",
-                    "defaultValue": "(args: InteractiveCardComponent) => ({\r\n    props: args,\r\n    template:'<ort-interactive-card>  </ort-interactive-card>'\r\n  })"
+                    "defaultValue": "(args: InteractiveCardComponent) => ({\r\n    props: args,\r\n    template:`\r\n    <div style=\"display:flex; flex-direction:row\">\r\n        <ort-interactive-card  [size]=\"{ width: '500px', height: '600px' }\" > \r\n\r\n        <h2 card-head>Card Title</h2>\r\n        <p card-head>This is the card's main content.</p>\r\n\r\n        <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n        src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3?wid=1280&amp;hei=960\"\r\n       alt=\"Placeholder Image\">\r\n\r\n       <p card-footer-left>Left text</p>\r\n       <button card-footer-right>Click me</button>\r\n       <button card-footer-right>Another button</button>\r\n\r\n        </ort-interactive-card>\r\n\r\n        \r\n        \r\n    <div style=\"display:flex; flex-direction:row\">\r\n    <ort-interactive-card  [size]=\"{ width: '500px', height: '600px' }\" > \r\n\r\n    <h2 card-head>Card Title</h2>\r\n    <p card-head>This is the card's main content.</p>\r\n\r\n    <img card-body data-src=\"https://rituals.scene7.com/is/image/rituals/2021_Aug_GWPKitchenPrivateCollection_3449RC:4-by-3\" \r\n    src=\"https://rituals.scene7.com/is/image/rituals/1115172-rituals-karma-2023-summer-box-of-joy-multi-2:4-by-3?wid=1280&hei=960\"\r\n   alt=\"Placeholder Image\">\r\n\r\n   <p card-footer-left>Left text</p>\r\n   <button card-footer-right>Click me</button>\r\n   <button card-footer-right>Another button</button>\r\n\r\n    </ort-interactive-card>\r\n\r\n    \r\n        </div>\r\n    `\r\n  })"
                 }
             ],
             "stories/Button.stories.ts": [
@@ -719,6 +803,26 @@
                 "status": "low"
             },
             {
+                "filePath": "stories/banner/banner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Banner",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/banner/banner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "stories/card/card.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -808,6 +912,26 @@
             },
             {
                 "filePath": "stories/froms/payment.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/slider/slider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "HorizontalSlider",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "stories/slider/slider.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

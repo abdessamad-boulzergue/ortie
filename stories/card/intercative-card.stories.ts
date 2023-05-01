@@ -18,7 +18,7 @@ export default {
     props: args,
     template:`
     <div style="display:flex; flex-direction:row">
-        <ort-interactive-card  [size]="{ width: '500px', height: '580px' }" > 
+        <ort-interactive-card  [size]="{ width: '500px', height: '600px' }" > 
 
         <h2 card-head>Card Title</h2>
         <p card-head>This is the card's main content.</p>
@@ -36,7 +36,7 @@ export default {
         
         
     <div style="display:flex; flex-direction:row">
-    <ort-interactive-card  [size]="{ width: '500px', height: '580px' }" > 
+    <ort-interactive-card  [size]="{ width: '500px', height: '600px' }" > 
 
     <h2 card-head>Card Title</h2>
     <p card-head>This is the card's main content.</p>

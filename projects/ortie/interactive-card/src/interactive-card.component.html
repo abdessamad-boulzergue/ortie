@@ -1,6 +1,8 @@
-<div class="card"  [ngStyle]="{ 'width': size?.width, 'height': size?.height }">
+<div class="card" >
     <div class="card-head">
-      <ng-content select="[card-head]"></ng-content>
+      <ort-horizontal card-head [position.vertical]="'start'" [position.horizontal]="'center'">
+        <ng-content select="[card-head]"></ng-content>
+    </ort-horizontal>
     </div>
     <div class="card-body">
       <ng-content select="[card-body]"></ng-content>
